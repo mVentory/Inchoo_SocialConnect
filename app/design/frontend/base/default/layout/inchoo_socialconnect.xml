@@ -61,6 +61,9 @@
     </default>
 
     <customer_account_login>
+        <remove name="inchoo_socialconnect_popup" />
+        <remove name="inchoo_socialconnect_popup_js" />
+
         <reference name="head">
             <action method="addItem">
                 <type>skin_css</type>
@@ -78,6 +81,9 @@
     </customer_account_login>
 
     <customer_account_create>
+        <remove name="inchoo_socialconnect_popup" />
+        <remove name="inchoo_socialconnect_popup_js" />
+
         <reference name="head">
             <action method="addItem">
                 <type>skin_css</type>
@@ -96,6 +102,16 @@
             </block>
         </reference>
     </customer_account_create>
+
+    <customer_account_forgotpassword>
+        <remove name="inchoo_socialconnect_popup" />
+        <remove name="inchoo_socialconnect_popup_js" />
+    </customer_account_forgotpassword>
+
+    <customer_account_changeforgotten>
+        <remove name="inchoo_socialconnect_popup" />
+        <remove name="inchoo_socialconnect_popup_js" />
+    </customer_account_changeforgotten>
 
     <customer_account>
         <reference name="customer_account_navigation">
@@ -125,6 +141,78 @@
             </action>
         </reference>
     </customer_account>
+
+    <customer_logged_out>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>inchoo_socialconnect/css/font-awesome.min.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>inchoo_socialconnect/css/popup.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>inchoo_socialconnect/js/popup.js</name>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="inchoo_socialconnect_popup" template="inchoo/socialconnect/popup.phtml">
+                <block type="inchoo_socialconnect/login" name="inchoo_socialconnect_login_buttons">
+                    <action method="setTemplate" >
+                        <template>inchoo/socialconnect/popup/login.phtml</template>
+                    </action>
+                    <block type="inchoo_socialconnect/google_button" name="inchoo_socialconnect_google_login_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/login/google/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/facebook_button" name="inchoo_socialconnect_facebook_login_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/login/facebook/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/twitter_button" name="inchoo_socialconnect_twitter_login_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/login/twitter/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/linkedin_button" name="inchoo_socialconnect_linkedin_login_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/login/linkedin/button.phtml</template>
+                        </action>
+                    </block>
+                </block>
+                <block type="inchoo_socialconnect/register" name="inchoo_socialconnect_register_buttons">
+                    <action method="setTemplate">
+                        <template>inchoo/socialconnect/popup/register.phtml</template>
+                    </action>
+                    <block type="inchoo_socialconnect/google_button" name="inchoo_socialconnect_checkout_google_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/register/google/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/facebook_button" name="inchoo_socialconnect_checkout_facebook_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/register/facebook/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/twitter_button" name="inchoo_socialconnect_checkout_twitter_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/register/twitter/button.phtml</template>
+                        </action>
+                    </block>
+                    <block type="inchoo_socialconnect/linkedin_button" name="inchoo_socialconnect_checkout_linkedin_button">
+                        <action method="setTemplate" >
+                            <template>inchoo/socialconnect/popup/register/linkedin/button.phtml</template>
+                        </action>
+                    </block>
+                </block>
+            </block>
+            <block type="core/template" name="inchoo_socialconnect_popup_js" template="inchoo/socialconnect/popup/js.phtml" />
+        </reference>
+    </customer_logged_out>
 
     <inchoo_socialconnect_account_google translate="label">
         <label>Customer My Account Google Connect</label>

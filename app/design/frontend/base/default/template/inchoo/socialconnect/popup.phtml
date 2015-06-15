@@ -1,0 +1,55 @@
+<?php
+/**
+* Inchoo
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Please do not edit or add to this file if you wish to upgrade
+* Magento or this extension to newer versions in the future.
+** Inchoo *give their best to conform to
+* "non-obtrusive, best Magento practices" style of coding.
+* However,* Inchoo *guarantee functional accuracy of
+* specific extension behavior. Additionally we take no responsibility
+* for any possible issue(s) resulting from extension usage.
+* We reserve the full right not to provide any kind of support for our free extensions.
+* Thank you for your understanding.
+*
+* @category Inchoo
+* @package SocialConnect
+* @author Anatoly A. Kazantsev <tolik@mventory.com>
+* @copyright Copyright (c) Inchoo (http://inchoo.net/)
+* @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+*/
+?>
+
+<?php $_helper = Mage::helper('customer'); ?>
+
+<div id="inchoo-socialconnect-popup-backdrop">
+    <div id="inchoo-socialconnect-popup-modal">
+        <div id="inchoo-socialconnect-popup-dialog">
+            <a id="inchoo-socialconnect-popup-close" href="#">&times;</a>
+            <div id="inchoo-socialconnect-popup-titles">
+                <p class="account-login"><?php echo $this->__('Login using your social network account') ?></p>
+                <p class="account-create"><?php echo $this->__('Register using your social network account') ?></p>
+            </div>
+            <div id="inchoo-socialconnect-popup-buttons">
+                <?php echo $this->getChildHtml('inchoo_socialconnect_login_buttons') ?>
+                <?php echo $this->getChildHtml('inchoo_socialconnect_register_buttons') ?>
+            </div>
+            <div id="inchoo-socialconnect-popup-links">
+                <a class="account-login inchoo-socialconnect-popup-link" href="<?php echo $_helper->getLoginUrl() ?>"><?php echo $this->__('Or click here to log in directly') ?></a>
+                <a class="account-create inchoo-socialconnect-popup-link" href="<?php echo $_helper->getRegisterUrl() ?>"><?php echo $this->__('Or click here to register directly') ?></a>
+            </div>
+        </div>
+    </div>
+</div>

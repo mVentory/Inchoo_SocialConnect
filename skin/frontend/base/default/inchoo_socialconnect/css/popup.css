@@ -1,0 +1,210 @@
+/* Styles for popup dialog parts */
+
+#inchoo-socialconnect-popup-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(200,200,200,0.7);
+    z-index: 200;
+}
+
+#inchoo-socialconnect-popup-modal {
+    position: absolute;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    padding: 60px 30px 30px;
+    min-width: 320px;
+
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    transform: translateX(-50%);
+}
+
+#inchoo-socialconnect-popup-dialog {
+    position: relative;
+    max-width: 1260px;
+    padding: 20px;
+    background: #fff;
+}
+
+#inchoo-socialconnect-popup-dialog > div {
+    margin: 20px 0 0;
+}
+
+#inchoo-socialconnect-popup-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    color: #636363;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#inchoo-socialconnect-popup-titles {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#inchoo-socialconnect-popup-links {
+    font-size: 11px;
+}
+
+/* Dialog Hide/show logic styles */
+
+#inchoo-socialconnect-popup-dialog .account-login,
+#inchoo-socialconnect-popup-dialog .account-create {
+    display: none;
+}
+
+.inchoo-socialconnect-popup-state-on,
+.inchoo-socialconnect-popup-action-login .account-login,
+.inchoo-socialconnect-popup-action-create .account-create {
+    display: block !important;
+}
+
+/* Styles for social buttons */
+
+/* General styles for button are taken from Bootstrap.
+   Styles for social buttons are taken from "Social Buttons for Bootstrap"
+   project at https://lipis.github.io/bootstrap-social/ */
+
+.inchoo-socialconnect-btn {
+    display: block;
+    position: relative;
+    padding: 10px 16px 10px 61px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.inchoo-socialconnect-btn:hover,
+.inchoo-socialconnect-btn:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.inchoo-socialconnect-btn:active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.inchoo-socialconnect-btn + .inchoo-socialconnect-btn {
+    margin-top: 5px;
+}
+
+.inchoo-socialconnect-btn > :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    line-height: 45px;
+    width: 45px;
+    font-size: 1.8em;
+}
+
+.inchoo-socialconnect-btn-facebook {
+    background-color: #3b5998;
+}
+
+.inchoo-socialconnect-btn-facebook:focus,
+.inchoo-socialconnect-btn-facebook:hover,
+.inchoo-socialconnect-btn-facebook:active {
+    background-color: #2d4373;
+}
+
+.inchoo-socialconnect-btn-facebook:active:hover,
+.inchoo-socialconnect-btn-facebook:active:focus {
+    background-color: #23345a;
+}
+
+.inchoo-socialconnect-btn-google {
+    background-color: #dd4b39;
+}
+
+.inchoo-socialconnect-btn-google:focus,
+.inchoo-socialconnect-btn-google:hover,
+.inchoo-socialconnect-btn-google:active {
+    background-color: #c23321;
+}
+
+.inchoo-socialconnect-btn-google:active:hover,
+.inchoo-socialconnect-btn-google:active:focus {
+    background-color: #a32b1c;
+}
+
+.inchoo-socialconnect-btn-linkedin {
+    background-color: #007bb6;
+}
+
+.inchoo-socialconnect-btn-linkedin:focus,
+.inchoo-socialconnect-btn-linkedin:hover,
+.inchoo-socialconnect-btn-linkedin:active {
+    background-color: #005983;
+}
+
+.inchoo-socialconnect-btn-linkedin:active:hover,
+.inchoo-socialconnect-btn-linkedin:active:focus {
+    background-color: #00405f;
+}
+
+.inchoo-socialconnect-btn-twitter {
+    background-color: #55acee;
+}
+
+.inchoo-socialconnect-btn-twitter:focus,
+.inchoo-socialconnect-btn-twitter:hover,
+.inchoo-socialconnect-btn-twitter:active {
+    background-color: #2795e9;
+}
+
+.inchoo-socialconnect-btn-twitter:active:hover,
+.inchoo-socialconnect-btn-twitter:active:focus {
+    background-color: #1583d7;
+}
+
+@media only screen and (max-width: 479px) {
+    #inchoo-socialconnect-popup-modal {
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 30px 15px;
+
+        -o-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+
+        transform: none;
+    }
+
+    #inchoo-socialconnect-popup-dialog {
+        padding: 20px 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #inchoo-socialconnect-popup-dialog {
+        padding: 20px 5px 5px;
+    }
+}
