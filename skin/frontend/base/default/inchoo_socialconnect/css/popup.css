@@ -1,0 +1,281 @@
+/* Columns utility */
+.sc-col {
+    float: left;
+}
+
+.sc-col1-set .sc-col {
+    float: none;
+    width: 100%;
+}
+
+.sc-col2-set {
+  margin: 0 0 0 -3%
+}
+
+.sc-col2-set .sc-col {
+    width: 47%;
+    margin: 0 0 0 3%;
+}
+
+.sc-col3-set {
+  margin: 0 0 0 -2.5%
+}
+
+.sc-col3-set .sc-col {
+    width: 30.8333%;
+    margin: 0 0 0 2.5%;
+}
+
+.sc-col4-set {
+  margin: 0 0 0 -1.5%
+}
+
+.sc-col4-set .sc-col {
+    width: 23.5%;
+    margin: 0 0 0 1.5%;
+}
+
+/* Styles for popup parts */
+#inchoo-socialconnect-popup-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(200,200,200,0.7);
+    z-index: 200;
+}
+
+#inchoo-socialconnect-popup-modal {
+    position: absolute;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    padding: 30px;
+    min-width: 320px;
+
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    transform: translateX(-50%);
+}
+
+#inchoo-socialconnect-popup-dialog {
+    position: relative;
+    max-width: 1260px;
+    padding: 20px 20px 0;
+    background: #fff;
+}
+
+#inchoo-socialconnect-popup-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    color: #636363;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#inchoo-socialconnect-popup-user-registered .registered-users,
+#inchoo-socialconnect-popup-user-new .new-users {
+    float: none;
+    width: auto;
+    padding: 0;
+    border: 0;
+}
+
+.inchoo-socialconnect-popup-action-forgotpassword .col2-set .col-1 {
+    float: none;
+    width: auto;
+    padding-right: 0;
+}
+
+.inchoo-socialconnect-popup-action-forgotpassword .col2-set .col-2 {
+    display: none;
+}
+
+#inchoo-socialconnect-popup-dialog .account-login,
+#inchoo-socialconnect-popup-dialog .account-create,
+#inchoo-socialconnect-popup-dialog .account-forgotpassword,
+#inchoo-socialconnect-popup-user-registered .new-users,
+#inchoo-socialconnect-popup-user-new .registered-users,
+#inchoo-socialconnect-popup-user-new .page-title {
+    display: none;
+}
+
+#inchoo-socialconnect-popup-dialog .account-login .fieldset,
+#inchoo-socialconnect-popup-dialog .account-login .buttons-set,
+#inchoo-socialconnect-popup-dialog .account-create .fieldset,
+#inchoo-socialconnect-popup-dialog .account-create .buttons-set,
+#inchoo-socialconnect-popup-dialog .account-forgotpassword .fieldset,
+#inchoo-socialconnect-popup-dialog .account-forgotpassword .buttons-set {
+    margin-left: 0;
+    max-width: 100%;
+}
+
+#inchoo-socialconnect-popup-dialog .account-login .fieldset,
+#inchoo-socialconnect-popup-dialog .account-create .fieldset {
+    position: relative;
+}
+
+#inchoo-socialconnect-popup-dialog .remember-me-popup {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+
+    -o-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+
+    transform: translateY(50%);
+}
+
+.inchoo-socialconnect-popup-state-on,
+.inchoo-socialconnect-popup-action-login .account-login,
+.inchoo-socialconnect-popup-action-create .account-create,
+.inchoo-socialconnect-popup-action-forgotpassword .account-forgotpassword {
+    display: block !important;
+}
+
+#inchoo-socialconnect-popup-buttons .sc-col-set {
+    margin: 0;
+}
+
+#inchoo-socialconnect-popup-buttons .sc-col {
+    float: none;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+#inchoo-socialconnect-popup-buttons .sc-col:first-child {
+    margin: 0;
+}
+
+#inchoo-socialconnect-popup-dialog .inchoo-socialconnect-login .buttons-set,
+#inchoo-socialconnect-popup-dialog .inchoo-socialconnect-register .buttons-set
+{
+    border: none;
+}
+
+/* Styles for block with only social login button to display under login form
+   on mobile devices */
+#inchoo-socialconnect-popup-login-buttons {
+    display: none;
+    margin: 20px 0 0 0;
+}
+
+#inchoo-socialconnect-popup-login-buttons .buttons-set {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-google,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-facebook,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-twitter,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-linkedin {
+    float: none;
+}
+
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-google-inner,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-facebook-inner,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-twitter-inner,
+#inchoo-socialconnect-popup-login-buttons .inchoo-socialconnect-linkedin-inner {
+    width: 100%;
+    padding: 0 !important;
+}
+
+#inchoo-socialconnect-popup-login-buttons .sc-col1-set .inchoo-socialconnect-google-inner,
+#inchoo-socialconnect-popup-login-buttons .sc-col1-set .inchoo-socialconnect-facebook-inner,
+#inchoo-socialconnect-popup-login-buttons .sc-col1-set .inchoo-socialconnect-twitter-inner,
+#inchoo-socialconnect-popup-login-buttons .sc-col1-set .inchoo-socialconnect-linkedin-inner {
+    padding: 0 10px !important;
+}
+
+.inchoo-socialconnect-google-right,
+.inchoo-socialconnect-facebook-right,
+.inchoo-socialconnect-twitter-right,
+.inchoo-socialconnect-linkedin-right {
+    margin: 0 0 0 -3px;
+}
+
+#inchoo-socialconnect-popup-login-buttons .sc-col1-set .sc-col {
+    display: inline-block;
+    width: auto;
+}
+
+/* Styles for social button */
+.inchoo-socialconnect-google,
+.inchoo-socialconnect-facebook,
+.inchoo-socialconnect-twitter,
+.inchoo-socialconnect-linkedin {
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+div.inchoo-socialconnect-google-inner,
+div.inchoo-socialconnect-facebook-inner,
+div.inchoo-socialconnect-twitter-inner,
+div.inchoo-socialconnect-linkedin-inner {
+    text-shadow: none;
+}
+
+@media only screen and (max-width: 770px) {
+    #inchoo-socialconnect-popup-modal {
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 30px 15px;
+
+        -o-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+
+        transform: none;
+    }
+
+    #inchoo-socialconnect-popup-dialog {
+        padding: 30px 10px 0;
+    }
+
+    #inchoo-socialconnect-popup-user-new .new-users {
+        margin: 30px 0 0;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .inchoo-socialconnect-popup-action-login #inchoo-socialconnect-popup-buttons {
+        display: none;
+    }
+
+    #inchoo-socialconnect-popup-login-buttons {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #inchoo-socialconnect-popup-dialog {
+        padding: 30px 5px 0;
+    }
+
+    .inchoo-socialconnect-google,
+    .inchoo-socialconnect-facebook,
+    .inchoo-socialconnect-twitter,
+    .inchoo-socialconnect-linkedin {
+        font-size: 11px;
+    }
+}
