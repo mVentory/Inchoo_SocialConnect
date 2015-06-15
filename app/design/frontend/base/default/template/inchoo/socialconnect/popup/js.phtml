@@ -1,3 +1,4 @@
+<?php
 /**
 * Inchoo
 *
@@ -25,37 +26,45 @@
 *
 * @category Inchoo
 * @package SocialConnect
-* @author Marko Martinović <marko.martinovic@inchoo.net>
+* @author Anatoly A. Kazantsev <tolik@mventory.com>
 * @copyright Copyright (c) Inchoo (http://inchoo.net/)
 * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
 */
+?>
 
-div.inchoo-socialconnect-linkedin{
-    float: right;
-    height: 30px !important;
-    background: transparent url('../images/login-button-left.png') no-repeat top left !important;
-    padding-left: 30px !important;
-}
+<?php
 
-div.inchoo-socialconnect-linkedin-inner{
-    height: 30px !important;
-    float: left !important;
-    background: transparent url('../images/login-button-inner.png') repeat-x top left !important;
-    padding: 0 5px !important;
-    text-shadow: 1px 1px #1c376d;
-}
+$accountUrl = Mage::helper('customer')->getAccountUrl();
 
-div.inchoo-socialconnect-linkedin-right{
-    float: left !important;
-    height: 30px !important;
-    width: 3px !important;
-    background: transparent url('../images/login-button-right.png') no-repeat top left !important;
-}
+?>
 
-div.inchoo-socialconnect-linkedin-inner a{
-    color: #FFFFFF !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-decoration: none !important;
-    line-height: 30px !important;
-}      
+<script type="text/javascript">
+//<![CDATA[
+
+;(function($) {
+
+$(function() {
+    var prefix = "<?php echo $accountUrl ?>";
+
+    $('a[href^="' + prefix + '"]').on('click', function() {
+        var
+            pos,
+            action,
+            prefixLen = prefix.length,
+            url = $(this).attr('href');
+
+        if (!(url && url.length > prefixLen && url.indexOf(prefix, 0) === 0))
+            return;
+
+        pos = (pos = url.indexOf('/', prefixLen)) > 0 ? pos : undefined;
+        action = url.substring(prefix.length, pos);
+
+        inchooSocialConnectPopup(action);
+        return false;
+    });
+});
+
+})(jQuery);
+
+//]]>
+</script>.
