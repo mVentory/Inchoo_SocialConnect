@@ -150,12 +150,12 @@
         </reference>
         <reference name="before_body_end">
             <block type="core/template" name="inchoo_socialconnect_popup" template="inchoo/socialconnect/popup.phtml">
-                <block type="customer/form_login" name="customer_form_login" template="persistent/customer/form/login.phtml">
+                <block type="inchoo_socialconnect/form_login" name="customer_form_login" template="persistent/customer/form/login.phtml">
                     <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
                     <block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" />
                 </block>
 
-                <block type="customer/form_register" name="customer_form_register" template="persistent/customer/form/register.phtml">
+                <block type="inchoo_socialconnect/form_register" name="customer_form_register" template="persistent/customer/form/register.phtml">
                     <block type="page/html_wrapper" name="customer.form.register.fields.before" as="form_fields_before" translate="label">
                         <label>Form Fields Before</label>
                     </block>
