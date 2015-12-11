@@ -163,7 +163,7 @@
                     <block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" />
                 </block>
 
-                <block type="customer/account_forgotpassword" name="forgotPassword" template="customer/form/forgotpassword.phtml" />
+                <block type="customer/account_forgotpassword" name="forgotPassword" template="inchoo/socialconnect/popup/form/forgotpassword.phtml" />
 
                 <block type="inchoo_socialconnect/login" name="inchoo_socialconnect_login">
                     <action method="setTemplate" >
