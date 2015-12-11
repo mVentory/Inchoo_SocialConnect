@@ -108,6 +108,11 @@
         <remove name="inchoo_socialconnect_popup_js" />
     </customer_account_forgotpassword>
 
+    <customer_account_changeforgotten>
+        <remove name="inchoo_socialconnect_popup" />
+        <remove name="inchoo_socialconnect_popup_js" />
+    </customer_account_changeforgotten>
+
     <customer_account>
         <reference name="customer_account_navigation">
             <action method="addLink" translate="label" module="inchoo_socialconnect"
