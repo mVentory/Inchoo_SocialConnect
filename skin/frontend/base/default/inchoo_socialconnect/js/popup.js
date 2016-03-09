@@ -35,20 +35,20 @@
 var
     actionCssPrefix = 'inchoo-socialconnect-popup-action-',
     currentActionCss,
-    $window,
-    $background,
-    $closeBtn;
+    //$window,
+    $background;
+    //$closeBtn;
 
 function show (action) {
     if (!$background.hasClass('inchoo-socialconnect-popup-state-on')) {
         $background.addClass('inchoo-socialconnect-popup-state-on');
 
-        $window.on('keyup.inchoo-socialconnect', function (event) {
+        //$window.on('keyup.inchoo-socialconnect', function (event) {
 
-            //Esc key is pressed
-            if (event.which == 27)
-                hide();
-        });
+        //    //Esc key is pressed
+        //    if (event.which == 27)
+        //        hide();
+        //});
     }
 
     if (currentActionCss)
@@ -61,24 +61,24 @@ function show (action) {
     );
 }
 
-function hide () {
-    $window.off('keyup.inchoo-socialconnect');
-    $background.removeClass('inchoo-socialconnect-popup-state-on');
-}
+//function hide () {
+//    $window.off('keyup.inchoo-socialconnect');
+//    $background.removeClass('inchoo-socialconnect-popup-state-on');
+//}
 
 window.inchooSocialConnectPopup = show;
 
 $(function() {
-    $window = $(window);
+    //$window = $(window);
     $background = $('#inchoo-socialconnect-popup-backdrop');
-    $closeBtn = $('#inchoo-socialconnect-popup-close');
+    //$closeBtn = $('#inchoo-socialconnect-popup-close');
 
-    $background.on('click', function (event) {
-        if (event.target === this)
-            hide();
-    });
+    //$background.on('click', function (event) {
+    //    if (event.target === this)
+    //        hide();
+    //});
 
-    $closeBtn.on('click', hide);
+    //$closeBtn.on('click', hide);
 });
 
 })(jQuery);
